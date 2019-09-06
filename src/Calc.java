@@ -27,6 +27,7 @@ public class Calc extends JFrame {
 				try {
 					Calc frame = new Calc();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -35,8 +36,8 @@ public class Calc extends JFrame {
 	}
 	public Calc() {
 		super("Calculadora");
-
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		setBounds(100, 100, 330, 365);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.DARK_GRAY);
