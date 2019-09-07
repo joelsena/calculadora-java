@@ -199,7 +199,7 @@ public class Calc extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num1 = Double.parseDouble(calc.getText());
-					calc.setText("- ");
+					calc.setText(" - ");
 				}catch(Exception ae) {}
 			}
 		});
@@ -213,7 +213,7 @@ public class Calc extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num1 = Double.parseDouble(calc.getText());
-					calc.setText("* ");
+					calc.setText(" * ");
 				}catch(Exception ae) {}
 			}
 		});
@@ -227,8 +227,7 @@ public class Calc extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num1 = Double.parseDouble(calc.getText());
-					calc.setText("\u00F7 ");
-
+					calc.setText(" \u00F7 ");
 				}catch(Exception ae) {}
 			}
 		});
@@ -242,7 +241,7 @@ public class Calc extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num1 = Double.parseDouble(calc.getText());
-					calc.setText("+ ");
+					calc.setText(" + ");
 
 				}catch(Exception ae) {}
 			}
@@ -256,8 +255,8 @@ public class Calc extends JFrame {
 		btIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					num2 = Double.parseDouble(calc.getText().substring(1));
-					String opt = calc.getText().substring(0,1);
+					num2 = Double.parseDouble(calc.getText().substring(2));
+					String opt = calc.getText().substring(1,2);
 					switch(opt) {
 					case "-":
 						res = num1-num2;
