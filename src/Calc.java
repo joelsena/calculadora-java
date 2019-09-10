@@ -18,9 +18,10 @@ public class Calc extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField calc;
-	double num1 ;
-	double num2 ;
-	double res ;
+	double num1;
+	double num2;
+	double res;
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -34,10 +35,11 @@ public class Calc extends JFrame {
 			}
 		});
 	}
+
 	public Calc() {
 		super("Calculadora");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		setBounds(100, 100, 330, 365);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.DARK_GRAY);
@@ -49,7 +51,7 @@ public class Calc extends JFrame {
 		calc.setBounds(15, 11, 286, 47);
 		calc.setBackground(Color.DARK_GRAY);
 		calc.setForeground(Color.white);
-		calc.setFont(new Font("Consolas",Font.BOLD,17));
+		calc.setFont(new Font("Consolas", Font.BOLD, 17));
 		contentPane.add(calc);
 		calc.setColumns(10);
 
@@ -64,10 +66,10 @@ public class Calc extends JFrame {
 		bt1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"1");
+				calc.setText(rep + "1");
 			}
 		});
-		
+
 		JButton btnApagar = new JButton("<=");
 		btnApagar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -80,13 +82,14 @@ public class Calc extends JFrame {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
 				try {
-					String ult= rep.substring(0,rep.length()-1);
+					String ult = rep.substring(0, rep.length() - 1);
 					calc.setText(ult);
-				}catch(Exception e) {}
+				} catch (Exception e) {
+				}
 			}
 		});
 		panel.add(btnApagar);
-		bt1.setFont(new Font("Consolas",Font.BOLD,17));
+		bt1.setFont(new Font("Consolas", Font.BOLD, 17));
 		bt1.setForeground(Color.white);
 		panel.add(bt1);
 
@@ -96,10 +99,10 @@ public class Calc extends JFrame {
 		bt2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"2");
+				calc.setText(rep + "2");
 			}
 		});
-		bt2.setFont(new Font("Consolas",Font.BOLD,17));
+		bt2.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel.add(bt2);
 
 		JButton bt3 = new JButton("3");
@@ -108,10 +111,10 @@ public class Calc extends JFrame {
 		bt3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"3");
+				calc.setText(rep + "3");
 			}
 		});
-		bt3.setFont(new Font("Consolas",Font.BOLD,17));
+		bt3.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel.add(bt3);
 
 		JButton bt4 = new JButton("4");
@@ -120,10 +123,10 @@ public class Calc extends JFrame {
 		bt4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"4");
+				calc.setText(rep + "4");
 			}
 		});
-		bt4.setFont(new Font("Consolas",Font.BOLD,17));
+		bt4.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel.add(bt4);
 
 		JButton bt5 = new JButton("5");
@@ -132,10 +135,10 @@ public class Calc extends JFrame {
 		bt5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"5");
+				calc.setText(rep + "5");
 			}
 		});
-		bt5.setFont(new Font("Consolas",Font.BOLD,17));
+		bt5.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel.add(bt5);
 
 		JButton bt6 = new JButton("6");
@@ -144,10 +147,10 @@ public class Calc extends JFrame {
 		bt6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"6");
+				calc.setText(rep + "6");
 			}
 		});
-		bt6.setFont(new Font("Consolas",Font.BOLD,17));
+		bt6.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel.add(bt6);
 
 		JButton bt7 = new JButton("7");
@@ -156,10 +159,10 @@ public class Calc extends JFrame {
 		bt7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"7");
+				calc.setText(rep + "7");
 			}
 		});
-		bt7.setFont(new Font("Consolas",Font.BOLD,17));
+		bt7.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel.add(bt7);
 
 		JButton bt8 = new JButton("8");
@@ -168,10 +171,10 @@ public class Calc extends JFrame {
 		bt8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"8");
+				calc.setText(rep + "8");
 			}
 		});
-		bt8.setFont(new Font("Consolas",Font.BOLD,17));
+		bt8.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel.add(bt8);
 
 		JButton bt9 = new JButton("9");
@@ -180,24 +183,24 @@ public class Calc extends JFrame {
 		bt9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"9");
+				calc.setText(rep + "9");
 			}
 		});
-		bt9.setFont(new Font("Consolas",Font.BOLD,17));
+		bt9.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel.add(bt9);
-		
-				JButton bt0= new JButton("0");
-				bt0.setBackground(Color.DARK_GRAY);
-				bt0.setForeground(Color.white);
-				bt0.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent ae) {
-						String rep = calc.getText();
-						calc.setText(rep+"0");
-					}
-				});
-				bt0.setFont(new Font("Consolas",Font.BOLD,17));
-				panel.add(bt0);
-		
+
+		JButton bt0 = new JButton("0");
+		bt0.setBackground(Color.DARK_GRAY);
+		bt0.setForeground(Color.white);
+		bt0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				String rep = calc.getText();
+				calc.setText(rep + "0");
+			}
+		});
+		bt0.setFont(new Font("Consolas", Font.BOLD, 17));
+		panel.add(bt0);
+
 		JButton btnPon = new JButton(".");
 		btnPon.setBackground(Color.DARK_GRAY);
 		btnPon.setFont(new Font("Consolas", Font.BOLD, 19));
@@ -205,7 +208,7 @@ public class Calc extends JFrame {
 		btnPon.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+".");
+				calc.setText(rep + ".");
 			}
 		});
 		panel.add(btnPon);
@@ -214,18 +217,19 @@ public class Calc extends JFrame {
 		panel_1.setBackground(Color.GRAY);
 		panel_1.setBounds(227, 69, 74, 247);
 		contentPane.add(panel_1);
-		panel_1.setLayout(new GridLayout(5, 0,0, 0));
+		panel_1.setLayout(new GridLayout(5, 0, 0, 0));
 
 		JButton btMenos = new JButton("-");
 		btMenos.setBackground(Color.DARK_GRAY);
 		btMenos.setForeground(Color.white);
-		btMenos.setFont(new Font("Consolas",Font.BOLD,17));
+		btMenos.setFont(new Font("Consolas", Font.BOLD, 17));
 		btMenos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num1 = Double.parseDouble(calc.getText());
 					calc.setText(" - ");
-				}catch(Exception ae) {}
+				} catch (Exception ae) {
+				}
 			}
 		});
 		panel_1.add(btMenos);
@@ -233,13 +237,14 @@ public class Calc extends JFrame {
 		JButton btMulti = new JButton("*");
 		btMulti.setBackground(Color.DARK_GRAY);
 		btMulti.setForeground(Color.white);
-		btMulti.setFont(new Font("Consolas",Font.BOLD,17));
+		btMulti.setFont(new Font("Consolas", Font.BOLD, 17));
 		btMulti.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num1 = Double.parseDouble(calc.getText());
 					calc.setText(" * ");
-				}catch(Exception ae) {}
+				} catch (Exception ae) {
+				}
 			}
 		});
 		panel_1.add(btMulti);
@@ -247,13 +252,14 @@ public class Calc extends JFrame {
 		JButton btDiv = new JButton("\u00F7");
 		btDiv.setBackground(Color.DARK_GRAY);
 		btDiv.setForeground(Color.white);
-		btDiv.setFont(new Font("Consolas",Font.BOLD,17));
+		btDiv.setFont(new Font("Consolas", Font.BOLD, 17));
 		btDiv.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num1 = Double.parseDouble(calc.getText());
 					calc.setText(" \u00F7 ");
-				}catch(Exception ae) {}
+				} catch (Exception ae) {
+				}
 			}
 		});
 		panel_1.add(btDiv);
@@ -261,14 +267,15 @@ public class Calc extends JFrame {
 		JButton btMais = new JButton("+");
 		btMais.setBackground(Color.DARK_GRAY);
 		btMais.setForeground(Color.white);
-		btMais.setFont(new Font("Consolas",Font.BOLD,17));
+		btMais.setFont(new Font("Consolas", Font.BOLD, 17));
 		btMais.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num1 = Double.parseDouble(calc.getText());
 					calc.setText(" + ");
 
-				}catch(Exception ae) {}
+				} catch (Exception ae) {
+				}
 			}
 		});
 		panel_1.add(btMais);
@@ -276,35 +283,35 @@ public class Calc extends JFrame {
 		JButton btIgual = new JButton("=");
 		btIgual.setBackground(Color.DARK_GRAY);
 		btIgual.setForeground(Color.white);
-		btIgual.setFont(new Font("Consolas",Font.BOLD,17));
+		btIgual.setFont(new Font("Consolas", Font.BOLD, 17));
 		btIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					num2 = Double.parseDouble(calc.getText().substring(2));
-					String opt = calc.getText().substring(1,2);
-					switch(opt) {
+					String opt = calc.getText().substring(1, 2);
+					switch (opt) {
 					case "-":
-						res = num1-num2;
-						calc.setText(res+"");
+						res = num1 - num2;
+						calc.setText(res + "");
 						break;
 					case "+":
-						res = num1+num2;
-						calc.setText(res+"");
+						res = num1 + num2;
+						calc.setText(res + "");
 						break;
 					case "*":
-						res = num1*num2;
-						calc.setText(res+"");
+						res = num1 * num2;
+						calc.setText(res + "");
 						break;
 					case "\u00F7":
-						res = num1/num2;
-						calc.setText(res+"");
+						res = num1 / num2;
+						calc.setText(res + "");
 						break;
 					}
-				}catch(Exception ae) {
-
+				} catch (Exception ae) {
 				}
 			}
 		});
+	
 		panel_1.add(btIgual);
 
 		JPanel panel_2 = new JPanel();
@@ -321,7 +328,7 @@ public class Calc extends JFrame {
 				calc.setText("");
 			}
 		});
-		btnC.setFont(new Font("Consolas",Font.BOLD,17));
+		btnC.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel_2.add(btnC);
 
 		JButton btRaiz = new JButton("\u221A");
@@ -332,11 +339,12 @@ public class Calc extends JFrame {
 				try {
 					num1 = Double.parseDouble(calc.getText());
 					res = Math.sqrt(num1);
-					calc.setText(res+"");
-				}catch(Exception e) {}
+					calc.setText(res + "");
+				} catch (Exception e) {
+				}
 			}
 		});
-		btRaiz.setFont(new Font("Consolas",Font.BOLD,17));
+		btRaiz.setFont(new Font("Consolas", Font.BOLD, 17));
 		panel_2.add(btRaiz);
 	}
 }
