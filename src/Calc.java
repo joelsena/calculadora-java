@@ -67,6 +67,25 @@ public class Calc extends JFrame {
 				calc.setText(rep+"1");
 			}
 		});
+		
+		JButton btnApagar = new JButton("<=");
+		btnApagar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnApagar.setFont(new Font("Consolas", Font.BOLD, 17));
+		btnApagar.setForeground(Color.WHITE);
+		btnApagar.setBackground(Color.DARK_GRAY);
+		btnApagar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				String rep = calc.getText();
+				try {
+					String ult= rep.substring(0,rep.length()-1);
+					calc.setText(ult);
+				}catch(Exception e) {}
+			}
+		});
+		panel.add(btnApagar);
 		bt1.setFont(new Font("Consolas",Font.BOLD,17));
 		bt1.setForeground(Color.white);
 		panel.add(bt1);
@@ -166,24 +185,30 @@ public class Calc extends JFrame {
 		});
 		bt9.setFont(new Font("Consolas",Font.BOLD,17));
 		panel.add(bt9);
-
-		JLabel label = new JLabel("");
-		panel.add(label);
-
-		JButton bt0= new JButton("0");
-		bt0.setBackground(Color.DARK_GRAY);
-		bt0.setForeground(Color.white);
-		bt0.addActionListener(new ActionListener() {
+		
+				JButton bt0= new JButton("0");
+				bt0.setBackground(Color.DARK_GRAY);
+				bt0.setForeground(Color.white);
+				bt0.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent ae) {
+						String rep = calc.getText();
+						calc.setText(rep+"0");
+					}
+				});
+				bt0.setFont(new Font("Consolas",Font.BOLD,17));
+				panel.add(bt0);
+		
+		JButton btnPon = new JButton(".");
+		btnPon.setBackground(Color.DARK_GRAY);
+		btnPon.setFont(new Font("Consolas", Font.BOLD, 19));
+		btnPon.setForeground(Color.WHITE);
+		btnPon.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String rep = calc.getText();
-				calc.setText(rep+"0");
+				calc.setText(rep+".");
 			}
 		});
-		bt0.setFont(new Font("Consolas",Font.BOLD,17));
-		panel.add(bt0);
-
-		JLabel label_1 = new JLabel("");
-		panel.add(label_1);
+		panel.add(btnPon);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.GRAY);
